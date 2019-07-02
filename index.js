@@ -1,8 +1,11 @@
-const express =  require('express')
+// import express
+const express = require('express')
+import bodyParser from 'body-parser'
 
+// initialized server
 const app = express()
 
-app.use(express.json())
+app.use(bodyParser())
 
 app.get('/', (req, res) => {
     return res.status(200).send({'message':'Welcome to our Server'})
