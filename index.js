@@ -1,6 +1,8 @@
+// import express
 const express = require('express')
 import bodyParser from 'body-parser'
 
+// initialized server
 const app = express()
 
 app.use(bodyParser())
