@@ -2,8 +2,8 @@
 const express = require('express')
 import dotenv from 'dotenv'
 import bodyParser from 'body-parser'
-import Reflection from './src/usingJSObject/controllers/reflection'
-import ReflectionWithDB from './src/usingDB/controller/Reflection';
+import ReflectionWithJsObject from './src/usingJSObject/controllers/reflection'
+import ReflectionWithDB from './src/usingDB/controllers/reflection';
 
 dotenv.config()
 const Reflection = process.env.TYPE === 'db' ? ReflectionWithDB : ReflectionWithJsObject
