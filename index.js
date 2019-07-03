@@ -1,8 +1,12 @@
 // import express
 const express = require('express')
+import dotenv from 'dotenv'
 import bodyParser from 'body-parser'
-import Reflection from './src/controllers/reflection'
+import Reflection from './src/usingJSObject/controllers/reflection'
+import ReflectionWithDB from './src/usingDB/controller/Reflection';
 
+dotenv.config()
+const Reflection = process.env.TYPE === 'db' ? ReflectionWithDB : ReflectionWithJsObject
 // initialized server
 const app = express()
 
